@@ -1,14 +1,29 @@
 import './App.css'
 
-const title = 'React';
+const getTitle = (title: string) => {
+    return title;
+}
 
-function App() {
+const fruits = ['Apple', 'Banana', 'Cherry', 'Date'];
 
+
+const App = () => {
     return (
         <div>
-            Hello {title}
+            <h1>
+                Hello {getTitle('React')};
+            </h1>
+
+            <label htmlFor="search">Search</label>
+            <input id='search' type="text"/>
+
+            <ul>
+                {fruits.map(fruit => (
+                    <li>{fruit}</li>
+                ))}
+            </ul>
         </div>
-    )
-}
+    );
+};
 
 export default App
