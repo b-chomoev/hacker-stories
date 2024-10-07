@@ -1,29 +1,21 @@
-import './App.css'
-
-const getTitle = (title: string) => {
-    return title;
-}
-
-const fruits = ['Apple', 'Banana', 'Cherry', 'Date'];
-
+import './App.css';
+import List from "./components/List/List.tsx";
 
 const App = () => {
     return (
         <div>
             <h1>
-                Hello {getTitle('React')};
+                My Hacker Stories
             </h1>
 
             <label htmlFor="search">Search</label>
             <input id='search' type="text"/>
 
-            <ul>
-                {fruits.map(fruit => (
-                    <li>{fruit}</li>
-                ))}
-            </ul>
+            <hr/>
+
+            <List />
         </div>
     );
 };
 
-export default App
+export default App;
