@@ -19,23 +19,19 @@ const list = [
     },
 ];
 
-const List = () => {
-    return (
-        <div>
-            <ul>
-                {list.map(i => (
-                    <li key={i.objectID}>Title: <a href={i.url}>{i.title}</a>
-                        <ul>
-                            <li>Author: {i.author}</li>
-                            <li>Comments: {i.num_comments}</li>
-                            <li>Points: {i.points}</li>
-                            <li>Product: {i.product}</li>
-                        </ul>
-                    </li>
-                ))}
-            </ul>
-        </div>
-    );
-};
+const List = () => (
+    <ul>
+        {list.map(i => (
+            <li key={i.objectID}>Title: <a href={i.url}>{i.title}</a>
+                <ul>
+                    <li>Author: {i.author}</li>
+                    <li>Comments: {i.num_comments}</li>
+                    <li>Points: {i.points}</li>
+                    <li>Product: {i.product}</li>
+                </ul>
+            </li>
+        ))}
+    </ul>
+);
 
 export default List;
