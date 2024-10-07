@@ -1,5 +1,6 @@
 import './App.css';
 import List from "./components/List/List.tsx";
+import Search from "./components/Search/Search.tsx";
 
 const App = () => {
     return (
@@ -8,11 +9,8 @@ const App = () => {
                 My Hacker Stories
             </h1>
 
-            <label htmlFor="search">Search</label>
-            <input id='search' type="text"/>
-
+            <Search />
             <hr/>
-
             <List />
         </div>
     );
